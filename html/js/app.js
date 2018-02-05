@@ -5,8 +5,8 @@
 			'<div class="head"><span>{{title}}</span></div>' +
 				'{{#isDefault}}<input type="text" name="value"/>{{/isDefault}}' +
 				'{{#isBig}}<textarea name="value"/>{{/isBig}}' +
-				'<button type="button" name="submit">Envoyer</button>' +
-				'<button type="button" name="cancel">Annuler</button>'
+				'<button type="button" name="submit">Submit</button>' +
+				'<button type="button" name="cancel">Cancel</button>'
 			'</div>' +
 		'</div>'
 	;
@@ -32,7 +32,7 @@
 			data.type = 'default';
 
 		if(typeof data.align == 'undefined')
-			data.align = 'top-left';
+			data.align = 'bottom-right';
 
 		data._index     = ESX_MENU.focus.length;
 		data._namespace = namespace;
