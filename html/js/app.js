@@ -102,11 +102,7 @@
 				$(menu).css('z-index', 1000 + view._index);
 
 				$(menu).find('button[name="submit"]').click(function() {
-					if(this.data.value % 1 != 0) {
-						console.log("Decimals not allowed");
-					} else {
-						ESX_MENU.submit(this.namespace, this.name, this.data);
-					}
+					ESX_MENU.submit(this.namespace, this.name, this.data);
 				}.bind({namespace: namespace, name: name, data: menuData}));
 
 				$(menu).find('button[name="cancel"]').click(function() {
