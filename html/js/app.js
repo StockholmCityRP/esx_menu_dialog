@@ -108,6 +108,12 @@
 				$(menu).find('button[name="cancel"]').click(function() {
 					ESX_MENU.cancel(this.namespace, this.name, this.data);
 				}.bind({namespace: namespace, name: name, data: menuData}));
+				
+				$(document).keyup(function(e) {
+					if(e.keyCode == 27){
+						ESX_MENU.cancel(namespace, name, menuData);
+					}
+				})
 
 				$(menu).find('[name="value"]').bind('input propertychange', function(){
 					this.data.value = $(menu).find('[name="value"]').val();
